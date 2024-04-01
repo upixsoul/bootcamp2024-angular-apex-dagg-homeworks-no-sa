@@ -10,6 +10,9 @@ import { CustomDirective } from './3-custom-directive/custom.directive';
 import { DataBindingComponent } from './4-data-binding/data-binding/data-binding.component';
 import { MyFirstModuleModule } from './5-modules/my-first-module/my-first-module.module';
 import { FormsModule } from '@angular/forms';
+import { MyInjectableModule } from './6-injectable/my-injectable/my-injectable.module';
+import { MyInjectable3Component } from './6-injectable/my-injectable3/my-injectable3.component';
+import { MyInjectable2Module } from './6-injectable/my-injectable2/my-injectable2.module';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { FormsModule } from '@angular/forms';
     CustomDirectiveComponent,
     CustomDirective,
     DataBindingComponent,
+    MyInjectable3Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MyFirstModuleModule
+    MyFirstModuleModule,
+    MyInjectableModule,
+    MyInjectable2Module
   ],
   providers: [],
   bootstrap: [AppComponent]
