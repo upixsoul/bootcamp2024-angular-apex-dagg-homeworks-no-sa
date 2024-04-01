@@ -1,0 +1,41 @@
+
+<h2>4.- Data Binding</h2>
+<br>
+<h1>Event</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <button type="button" class="btn btn-primary btn-sm" (click)="clickMe()">Click Me</button>
+        </div>
+    </div>
+</div>
+
+<br>
+<h1>One Way</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <input type="text" [value]="oneWayText">
+        </div>
+    </div>
+</div>
+
+<br>
+<h1>Two Ways</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <span>{{twoWaysText}}</span>
+        </div>
+    </div>
+    <div class="row row-cols-auto">
+        <div class="col">
+            <input type="text" (change)="twoWaysChangeText($event)" [value]="twoWaysText">
+        </div>
+    </div>
+    <div class="row row-cols-auto">
+        <div class="col">
+            <input [(ngModel)]="twoWaysText" >
+        </div>
+    </div>
+</div>

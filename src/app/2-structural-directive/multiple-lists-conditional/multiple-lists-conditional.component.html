@@ -1,0 +1,44 @@
+<h1>NgFor</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <ul>
+                <li *ngFor="let item of myArray">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<h1>NgIf</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <ul>
+                <ng-container *ngFor="let item of myArray">
+                <li *ngIf="item == 'B'">
+                    {{item}}
+                </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<h1>NgSwitch</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <ul>
+                <ng-container *ngFor="let item of myArray">
+                    <ng-container [ngSwitch]="item">
+                        <li *ngSwitchCase="'A'">1</li>
+                        <li *ngSwitchCase="'B'">2</li>
+                        <li *ngSwitchCase="'C'">3</li>
+                    </ng-container>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>

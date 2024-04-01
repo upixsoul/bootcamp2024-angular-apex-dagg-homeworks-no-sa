@@ -1,0 +1,35 @@
+<h2>1.- Attribute Directive</h2>
+<br>
+<h1>NgClass</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <span [ngClass]="active? 'redText':'' ">Hello</span>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-primary btn-sm" (click)="toggleFunc()">Toggle Active</button>
+        </div>
+    </div>
+    <div class="row row-cols-auto">
+        <div class="col">
+            active: {{active}}
+        </div>
+    </div>
+</div>
+<br>
+<h1>NgStyle</h1>
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col">
+            <span [ngStyle]="calculateStyles()">Hello</span>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-primary btn-sm" (click)="toggleStyleFunc()">Toggle Active</button>
+        </div>
+    </div>
+    <div class="row row-cols-auto">
+        <div class="col">
+            activeStyle: {{activeStyle}}
+        </div>
+    </div>
+</div>
