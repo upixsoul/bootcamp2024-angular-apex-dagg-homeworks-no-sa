@@ -53,17 +53,19 @@
       <h2>5.- Modules</h2>
       <br>
         <div class="header-nav">
-          <a routerLink="" routerLinkActive="active" class="nav-link"><span class="nav-text">Main</span></a>
+          <a routerLink="first" routerLinkActive="active" class="nav-link"><span class="nav-text">Main</span></a>
           <a routerLink="second" routerLinkActive="active" class="nav-link"><span class="nav-text">Second</span></a>
       </div>
       <br>
-      <router-outlet name="main"></router-outlet>
+      <ng-component *ngIf="router.url !== '/'">
+        <router-outlet></router-outlet>
+      </ng-component>
     </div>
     <div class="col"></div>
   </div>
-</div>
 
-<div class="row justify-content-md-center list-group-item-secondary">
+
+<div class="row justify-content-md-center list-group-item-info">
   <div class="col"></div>
   <div class="col">
     <br>
@@ -99,7 +101,7 @@
   <div class="col"></div>
 </div>
 
-<div class="row justify-content-md-center list-group-item-success">
+<div class="row justify-content-md-center list-group-item-info">
   <div class="col"></div>
   <div class="col">
     <br>
@@ -109,4 +111,5 @@
       <app-material></app-material>
   </div>
   <div class="col"></div>
+</div>
 </div>

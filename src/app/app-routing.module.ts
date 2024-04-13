@@ -5,12 +5,16 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    component: AppComponent
+  }/*,
+  {
+    path: 'first',
     component: AppComponent,
   },
   {
     path: 'second',
     component: AppComponent,
-  }
+  }*/
 ];
 
 @NgModule({

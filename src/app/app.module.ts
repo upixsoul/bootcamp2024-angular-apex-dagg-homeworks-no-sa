@@ -28,6 +28,7 @@ import { UserDialogComponent } from './8-material/user-dialog/user-dialog.compon
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MyOtherMainComponent } from './5-modules/my-other-main/my-other-main.component';
 
 
 @NgModule({

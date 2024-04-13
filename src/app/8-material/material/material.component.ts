@@ -19,7 +19,7 @@ export class MaterialComponent {
 
   openDialog() {
     this.dialogRef = this.dialog.open(UserDialogComponent, 
-      { data: this.user, height: '250px', width: '250px', autoFocus: true });
+      { data: this.user, height: '300px', width: '300px', autoFocus: true });
 
     this.dialogRef.afterClosed().subscribe((result: User) => {
       this.user.name = result?.name;
