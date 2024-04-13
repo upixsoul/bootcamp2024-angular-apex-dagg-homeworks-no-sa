@@ -1,0 +1,15 @@
+<ng-template let-data #myInfoDialog>
+    <h2 mat-dialog-title>Information</h2>
+    <div mat-dialog-content>
+      {{data}}
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Close</button>
+    </div>
+  </ng-template> 
+<section>
+    <button mat-flat-button (click)="openDialog()">Open Dialog</button>
+</section>
+<section>
+    {{user.name}}
+</section>

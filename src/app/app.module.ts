@@ -16,6 +16,19 @@ import { MyInjectable2Module } from './6-injectable/my-injectable2/my-injectable
 import { PipesComponent } from './7-pipes/pipes/pipes.component';
 import { CurrencyPipe } from './7-pipes/currency.pipe';
 import { CapitalPipe } from './7-pipes/capital.pipe';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MaterialComponent } from './8-material/material/material.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { UserDialogComponent } from './8-material/user-dialog/user-dialog.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +42,8 @@ import { CapitalPipe } from './7-pipes/capital.pipe';
     PipesComponent,
     CurrencyPipe,
     CapitalPipe,
+    MaterialComponent,
+    UserDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +51,19 @@ import { CapitalPipe } from './7-pipes/capital.pipe';
     FormsModule,
     MyFirstModuleModule,
     MyInjectableModule,
-    MyInjectable2Module
+    MyInjectable2Module,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
